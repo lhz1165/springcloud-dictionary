@@ -1,0 +1,27 @@
+### consul服务端口号
+server:
+  port: 9202
+
+#mybatis:
+#  config-location: classpath:mybatis.cfg.xml    #  mybatis主配置文件所在路径
+#  type-aliases-package: com.whq.springtest_client.entity  #  定义所有操作类的别名所在包
+
+#用户服务
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springcloud?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+  application:
+    name: consul-client
+  ###consul服务注册中心
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        heartbeat:
+          enabled: true
+      

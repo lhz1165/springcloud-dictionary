@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: test-gateway
+  profiles:
+    active: dev
+  message:
+    encoding: UTF-8
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        register: true
+        instance-id: ${spring.application.name}:${server.port}
+        service-name: ${spring.application.name}
+        port: ${server.port}
+        healthCheckPath: /actuator/health
+        healthCheckInterval: 15s
+      config:
+        discovery:
+          enabled: true
+          service-id: ${spring.application.name}:${server.port}
+        fail-fast: true
+    gateway:
+      routes:
+      - id: userservice
+        uri: lb://consul-client
+        predicates:
+        - Path=/user/**
+#        filters:
+#        - RewritePath=/user/(?<segment>.*), /$\{segment}
+      - id: wordsservice
+        uri: lb://springtest-service
+        predicates:
+          - Path=/word/**
+
+
+
+server:
+  port: 12010
+  tomcat:
+    basedir: tomcatlog
+    accesslog:
+      enabled: true
+      pattern: "%t %r %s %D"

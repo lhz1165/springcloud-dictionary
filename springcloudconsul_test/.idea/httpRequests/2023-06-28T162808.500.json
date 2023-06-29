@@ -1,0 +1,7 @@
+{
+  "timestamp": "2023-06-28T08:28:08.016+0000",
+  "path": "/user/login",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "Only one connection receive subscriber allowed."
+}

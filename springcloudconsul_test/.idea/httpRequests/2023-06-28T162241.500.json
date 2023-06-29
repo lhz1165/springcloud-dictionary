@@ -1,0 +1,7 @@
+{
+  "timestamp": "2023-06-28T08:22:41.466+0000",
+  "path": "/user/login",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "Unable to find RoutePredicateFactory with name RewritePath"
+}

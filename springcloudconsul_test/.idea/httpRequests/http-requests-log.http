@@ -1,0 +1,355 @@
+POST http://localhost:12010/user/login
+Accept: application/json
+Content-Type: application/json
+
+{"userName": "123","password": "123"}
+
+<> 2023-06-28T163859.404.json
+
+###
+
+POST http://localhost:12010/user/login
+Accept: application/json
+Content-Type: application/json
+
+{"userName": "123","password": "123"}
+
+<> 2023-06-28T163812.404.json
+
+###
+
+POST http://localhost:12010/user/login
+Accept: application/json
+Content-Type: application/json
+
+{"userName": "123","password": "123"}
+
+<> 2023-06-28T163742.404.json
+
+###
+
+POST http://localhost:12010/user/login
+Accept: application/json
+Content-Type: application/json
+
+{"userName": "123","password": "123"}
+
+<> 2023-06-28T163714.404.json
+
+###
+
+POST http://localhost:12010/user/login
+Accept: application/json
+Content-Type: application/json
+
+{"userName": "123","password": "123"}
+
+<> 2023-06-28T163653.404.json
+
+###
+
+POST http://localhost:12010/user/login
+Accept: application/json
+Content-Type: application/json
+
+{"userName": "123","password": "123"}
+
+<> 2023-06-28T163648.404.json
+
+###
+
+POST http://localhost:12010/user/login
+Accept: application/json
+Content-Type: application/json
+
+{"userName": "123","password": "123"}
+
+<> 2023-06-28T163250.404.json
+
+###
+
+POST http://localhost:12010/user/login
+Accept: application/json
+Content-Type: application/json
+
+{"userName": "123","password": "123"}
+
+<> 2023-06-28T163227.404.json
+
+###
+
+POST http://localhost:12010/user/login
+Accept: application/json
+Content-Type: application/json
+
+{"userName": "123","password": "123"}
+
+<> 2023-06-28T163145.404.json
+
+###
+
+POST http://localhost:12010/user/login
+
+Accept: application/json
+Content-Type: application/json
+
+
+{"userName": "123","password": "123"}
+
+<> 2023-06-28T162808.500.json
+
+###
+
+POST http://localhost:12010/user/login
+
+Accept: application/json
+Content-Type: application/json
+
+
+{"userName": "123","password": "123"}
+
+<> 2023-06-28T162513.500.json
+
+###
+
+POST http://localhost:12010/user/login
+
+Accept: application/json
+Content-Type: application/json
+
+
+{"userName": "123","password": "123"}
+
+<> 2023-06-28T162500.500.json
+
+###
+
+POST http://localhost:12010/user/login
+
+Accept: application/json
+Content-Type: application/json
+
+
+{"userName": "123","password": "123"}
+
+<> 2023-06-28T162439.500.json
+
+###
+
+POST http://localhost:12010/user/login
+
+Accept: application/json
+Content-Type: application/json
+
+
+{"userName": "123","password": "123"}
+
+<> 2023-06-28T162241.500.json
+
+###
+
+POST http://localhost:12010/user/login
+
+Accept: application/json
+Content-Type: application/json
+
+
+{"userName": "123","password": "123"}
+
+<> 2023-06-28T161908.500.json
+
+###
+
+POST http://localhost:12010/user/login
+
+Accept: application/json
+Content-Type: application/json
+
+
+{"userName": "123","password": "123"}
+
+<> 2023-06-28T161851.500.json
+
+###
+
+POST http://localhost:12010/user/login
+
+Accept: application/json
+Content-Type: application/json
+
+
+{"userName": "123","password": "123"}
+
+<> 2023-06-28T161525.500.json
+
+###
+
+POST http://localhost:12010/user/login
+
+Accept: application/json
+Content-Type: application/json
+
+
+{"userName": "123","password": "123"}
+
+<> 2023-06-28T161209.200.json
+
+###
+
+POST http://localhost:12010/user/login
+
+Accept: application/json
+Content-Type: application/json
+
+
+{"userName": "123","password": "123"}
+
+<> 2023-06-28T161146.200.json
+
+###
+
+POST http://localhost:12010/user/login
+
+Accept: application/json
+Content-Type: application/json
+
+
+{"userName": "123","password": "123"}
+
+<> 2023-06-28T160544.200.json
+
+###
+
+POST http://localhost:12010/user/login
+
+Accept: application/json
+Content-Type: application/json
+
+
+{"userName": "123","password": "123"}
+
+<> 2023-06-28T160445.200.json
+
+###
+
+POST http://localhost:12010/user/login
+
+Accept: application/json
+Content-Type: application/json
+
+
+{"userName": "123","password": "123"}
+
+<> 2023-06-28T160410.200.json
+
+###
+
+POST http://localhost:12100/user/login
+Accept: application/json
+Content-Type: application/json
+
+{"userName": "123","password": "123"}
+
+###
+
+POST http://localhost:12100/user/login
+Accept: application/json
+Content-Type: application/json
+{"userName": "123","password": "123"}
+
+###
+
+POST http://localhost:12100/login
+Accept: application/json
+Content-Type: application/json
+
+{"userName": "123","password": "123"}
+
+###
+
+POST http://localhost:12010/user/login
+Accept: application/json
+Content-Type: application/json
+
+{"userName": "123","password": "123"}
+
+<> 2023-06-28T160242.404.json
+
+###
+
+POST http://localhost:12010/user/lgoin
+Accept: application/json
+Content-Type: application/json
+
+{"userName": "123","password": "123"}
+
+<> 2023-06-28T155815.200.json
+
+###
+
+POST http://localhost:12010/lgoin
+Accept: application/json
+Content-Type: application/json
+
+{"userName": "123","password": "123"}
+
+<> 2023-06-28T155806.404.json
+
+###
+
+GET http://localhost:12010/user/getUser?token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMTEiLCJvcGVuSWQiOiIxMTEiLCJleHAiOjE2ODc5Mjk4MjksInVzZXJJZCI6MSwiaWF0IjoxNjg3OTI3MjM3LCJqdGkiOiJ0b2tlbklkIn0.ShAjQLYVR5qqwRkxF4hfgayqKlYr9_H10ImK85ZxEmo
+
+<> 2023-06-28T155752.500.json
+
+###
+
+GET http://localhost:12010/user/getUser?token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMTEiLCJvcGVuSWQiOiIxMTEiLCJleHAiOjE2ODc5Mjk4MjksInVzZXJJZCI6MSwiaWF0IjoxNjg3OTI3MjM3LCJqdGkiOiJ0b2tlbklkIn0.ShAjQLYVR5qqwRkxF4hfgayqKlYr9_H10ImK85ZxEmo
+
+<> 2023-06-28T125704.200.json
+
+###
+
+GET http://localhost:12010/user/getUser?token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMTEiLCJvcGVuSWQiOiIxMTEiLCJleHAiOjE2ODc5Mjk4MjksInVzZXJJZCI6MSwiaWF0IjoxNjg3OTI3MjM3LCJqdGkiOiJ0b2tlbklkIn0.ShAjQLYVR5qqwRkxF4hfgayqKlYr9_H10ImK85ZxEmo
+
+<> 2023-06-28T125325.404.json
+
+###
+
+GET http://localhost:9202/getUser?token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMTEiLCJvcGVuSWQiOiIxMTEiLCJleHAiOjE2ODc5Mjk4MjksInVzZXJJZCI6MSwiaWF0IjoxNjg3OTI3MjM3LCJqdGkiOiJ0b2tlbklkIn0.ShAjQLYVR5qqwRkxF4hfgayqKlYr9_H10ImK85ZxEmo
+
+<> 2023-06-28T124054.200.json
+
+###
+
+GET http://localhost:8080/getUser?token=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMTEiLCJvcGVuSWQiOiIxMTEiLCJleHAiOjE2ODc5Mjk4MjksInVzZXJJZCI6MSwiaWF0IjoxNjg3OTI3MjM3LCJqdGkiOiJ0b2tlbklkIn0.ShAjQLYVR5qqwRkxF4hfgayqKlYr9_H10ImK85ZxEmo
+
+###
+
+POST http://localhost:9202/lgoin
+Accept: application/json
+Content-Type: application/json
+
+{"userName": "123","password": "123"}
+
+<> 2023-06-28T124037.200.json
+
+###
+
+POST http://localhost:9202/lgoin
+Accept: application/json
+Content-Type: application/json
+
+{"userName": "123","password": "123"}
+
+<> 2023-06-28T122544.200.json
+
+###
+
+POST http://localhost:9202/lgoin
+Accept: application/json
+Content-Type: application/json
+
+{"userName": "123","password": "123"}
+
+###
+
