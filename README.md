@@ -3,3 +3,5 @@ springcloud整合consul测试
 
 查询单词 调用网易云词典api
 
+consul 1.7.13
+
