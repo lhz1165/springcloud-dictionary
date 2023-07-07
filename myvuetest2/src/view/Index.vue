@@ -39,7 +39,19 @@
                 <el-button>取消</el-button>
               </el-form-item>
             </el-form>
-          {{resultWord}}
+
+
+            <el-descriptions title="翻译信息" :column="1">
+              <el-descriptions-item label="翻译" >{{ resultWord.translation }} </el-descriptions-item>
+<!--              翻译成功一定存在，需要应用绑定语音合成服务才能正常播放否则返回110错误码-->
+<!--              <el-descriptions-item label="发音地址">-->
+<!--                <audio controls="controls" autoplay="autoplay">-->
+<!--                  <source v-bind:src="resultWord.tspeakUrl" type="audio/mpeg">-->
+<!--                </audio>-->
+<!--              </el-descriptions-item>-->
+              <el-descriptions-item label="其他解释">{{ resultWord.explains }}</el-descriptions-item>
+            </el-descriptions>
+
           </el-main>
 
         </el-container>
@@ -60,16 +72,15 @@ import {getRequest, postRequest} from "@/utils/apis";
 export default {
   name: "Index",
   data() {
-    const item = {
-      date: '2016-05-02',
-      name: '王小虎',
-      address: '上海市普陀区金沙江路 1518 弄'
-    };
     return {
-      tableData: Array(20).fill(item),
       user:{},
       form: {},
-      resultWord:''
+      resultWord: {
+        translation: "",
+        tspeakUrl: "",
+        explains: "",
+
+      }
     }
   },
   mounted() {

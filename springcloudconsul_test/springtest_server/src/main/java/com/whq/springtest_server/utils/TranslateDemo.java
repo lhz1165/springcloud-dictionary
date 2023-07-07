@@ -1,9 +1,14 @@
 package com.whq.springtest_server.utils;
 
 
+import com.alibaba.fastjson2.JSON;
+import com.alibaba.fastjson2.JSONObject;
+import com.whq.springtest_server.entity.TranslationWordMean;
+
 import java.nio.charset.StandardCharsets;
 import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -26,6 +31,11 @@ public class TranslateDemo {
         if (result != null) {
             System.out.println(new String(result, StandardCharsets.UTF_8));
         }
+        String s = new String(result, StandardCharsets.UTF_8);
+        JSONObject jsonObject = JSON.parseObject(s);
+        Boolean isWord = (Boolean)jsonObject.get("isWord");
+
+        System.out.println((String) jsonObject.get("tSpeakUrl"));
         System.exit(1);
     }
 
@@ -36,7 +46,24 @@ public class TranslateDemo {
         AuthV3Util.addAuthParams(APP_KEY, APP_SECRET, params);
         byte[] result = HttpUtil.doPost("https://openapi.youdao.com/api", null, params, "application/json");
         // 打印返回结果
-        return new String(result, StandardCharsets.UTF_8);
+
+        String s = new String(result, StandardCharsets.UTF_8);
+        JSONObject jsonObject = JSON.parseObject(s);
+        Boolean isWord = (Boolean)jsonObject.get("isWord");
+        if (isWord) {
+            TranslationWordMean ans = new TranslationWordMean();
+            List<String> translation = (List<String>) jsonObject.get("translation");
+            JSONObject jsonObject1 = (JSONObject) jsonObject.get("basic");
+            List<String> explains = (List<String>) jsonObject1.get("explains");
+            String tSpeakUrl = (String) jsonObject.get("tSpeakUrl");
+
+            ans.setExplains(explains);
+            ans.setTSpeakUrl(tSpeakUrl);
+            ans.setTranslation(translation);
+            return JSON.toJSONString(ans);
+        }else {
+            return "not word";
+        }
     }
 
     private static Map<String, String[]> createRequestParams(String word) {
@@ -53,7 +80,6 @@ public class TranslateDemo {
             put("q", new String[]{q});
             put("from", new String[]{from});
             put("to", new String[]{to});
-//            put("vocabId", new String[]{vocabId});
         }};
     }
 }

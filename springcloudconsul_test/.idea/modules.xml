@@ -3,9 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/springcloudconsul_test.iml" filepath="$PROJECT_DIR$/.idea/springcloudconsul_test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springtest_client/springtest_client.iml" filepath="$PROJECT_DIR$/springtest_client/springtest_client.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springtest_gateway/springtest_gateway.iml" filepath="$PROJECT_DIR$/springtest_gateway/springtest_gateway.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springtest_server/springtest_server.iml" filepath="$PROJECT_DIR$/springtest_server/springtest_server.iml" />
     </modules>
   </component>
 </project>
