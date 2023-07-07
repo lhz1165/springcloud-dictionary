@@ -23,12 +23,16 @@ spring:
         fail-fast: true
     gateway:
       routes:
+#        我们⾃定义的路由 ID，保持唯⼀
       - id: userservice
+#        ⽬标服务名称
         uri: lb://consul-client
+#        路由条件所有的/user/地址都路由到 consul-client服务
         predicates:
         - Path=/user/**
+#        路由重写 前端请求 /user/xxxx-> 后端接口 /user1/xxxx
 #        filters:
-#        - RewritePath=/user/(?<segment>.*), /$\{segment}
+#        - RewritePath=/user/(?<segment>.*), /user1/$\{segment}
       - id: wordsservice
         uri: lb://springtest-service
         predicates:
