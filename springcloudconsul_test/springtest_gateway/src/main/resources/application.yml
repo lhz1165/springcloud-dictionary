@@ -1,49 +1,33 @@
+server:
+  port: 12010
+
 spring:
   application:
-    name: test-gateway
+    name: gateway
   profiles:
     active: dev
-  message:
-    encoding: UTF-8
   cloud:
-    consul:
+    consul: #Consul服务注册发现配置
       host: localhost
       port: 8500
       discovery:
-        register: true
-        instance-id: ${spring.application.name}:${server.port}
         service-name: ${spring.application.name}
-        port: ${server.port}
-        healthCheckPath: /actuator/health
-        healthCheckInterval: 15s
-      config:
-        discovery:
+        heartbeat:
           enabled: true
-          service-id: ${spring.application.name}:${server.port}
-        fail-fast: true
     gateway:
       routes:
-#        我们⾃定义的路由 ID，保持唯⼀
-      - id: userservice
-#        ⽬标服务名称
-        uri: lb://consul-client
-#        路由条件所有的/user/地址都路由到 consul-client服务
-        predicates:
-        - Path=/user/**
-#        路由重写 前端请求 /user/xxxx-> 后端接口 /user1/xxxx
-#        filters:
-#        - RewritePath=/user/(?<segment>.*), /user1/$\{segment}
-      - id: wordsservice
-        uri: lb://springtest-service
-        predicates:
-          - Path=/word/**
+        - id: consul-client
+          uri: lb://consul-client
+          predicates:
+            - Path=/user/**
+##        我们⾃定义的路由 ID，保持唯⼀
+#      - id: userservice
+##        ⽬标服务名称
+#        uri: lb://consul-client
+##        路由条件所有的/user/地址都路由到 consul-client服务
+#        predicates:
+#          - Path=/user/**
+##        路由重写 前端请求 /user/xxxx-> 后端接口 /user1/xxxx
+##        filters:
+##        - RewritePath=/user/(?<segment>.*), /user1/$\{segment}
 
-
-
-server:
-  port: 12010
-  tomcat:
-    basedir: tomcatlog
-    accesslog:
-      enabled: true
-      pattern: "%t %r %s %D"

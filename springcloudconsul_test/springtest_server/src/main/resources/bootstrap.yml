@@ -7,20 +7,27 @@ spring:
   profiles:
     active: dev
   cloud:
-    consul:
-      host: localhost
-      port: 8500
-      discovery:
-        register: true
-        instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
-        service-name: ${spring.application.name}
-        port: 9201
-        healthCheckPath: /actuator/health
-        healthCheckInterval: 15s
-      config:
-        enabled: true
-        format: YAML
-        prefix: config
-        defaultContext: application
-        profileSeparator: ','
-        data-key: data
+      consul: #Consul服务注册发现配置
+        host: localhost
+        port: 8500
+        discovery:
+          service-name: ${spring.application.name}
+          heartbeat:
+            enabled: true
+#    consul:
+#      host: localhost
+#      port: 8500
+#      discovery:
+#        register: true
+#        instance-id: ${spring.application.name}:${spring.cloud.client.ip-address}:${server.port}
+#        service-name: ${spring.application.name}
+#        port: 9201
+#        healthCheckPath: /actuator/health
+#        healthCheckInterval: 15s
+#      config:
+#        enabled: true
+#        format: YAML
+#        prefix: config
+#        defaultContext: application
+#        profileSeparator: ','
+#        data-key: data

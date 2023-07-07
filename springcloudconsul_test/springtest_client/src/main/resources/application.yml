@@ -17,7 +17,7 @@ spring:
     name: consul-client
   ###consul服务注册中心
   cloud:
-    consul:
+    consul: #Consul服务注册发现配置
       host: localhost
       port: 8500
       discovery:

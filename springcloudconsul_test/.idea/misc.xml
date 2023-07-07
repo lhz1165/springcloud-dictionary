@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/springtest_server/pom.xml" />
         <option value="$PROJECT_DIR$/springtest_gateway/pom.xml" />
         <option value="$PROJECT_DIR$/springtest_client/pom.xml" />
+        <option value="$PROJECT_DIR$/springtest-common/pom.xml" />
       </list>
     </option>
   </component>

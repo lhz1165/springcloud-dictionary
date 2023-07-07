@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springtest_gateway" />
+        <module name="springtest-common" />
         <module name="springtest_client" />
         <module name="springtest_server" />
       </profile>

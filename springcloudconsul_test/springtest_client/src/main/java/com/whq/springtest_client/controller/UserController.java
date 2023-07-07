@@ -2,14 +2,13 @@ package com.whq.springtest_client.controller;
 
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.whq.springtest_client.entity.Result;
+import com.lhz.entity.Result;
+import com.lhz.util.ResultUtil;
 import com.whq.springtest_client.entity.User;
 import com.whq.springtest_client.mapper.UserMapper;
 import com.whq.springtest_client.util.JwtUtils;
-import com.whq.springtest_client.util.ResultUtil;
 import io.jsonwebtoken.Claims;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpRequest;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
